@@ -28,31 +28,31 @@ class sign_in extends StatelessWidget {
               Container(
                 height: 50,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 "Welcome Back!",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 "Email Address",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               CustomTextForm(
-                prefixIcon: Icon(Icons.account_box_outlined),
+                prefixIcon: const Icon(Icons.account_box_outlined),
                 suffixIcon: null,
                 validator: (val) {
                   if (val == null || val.isEmpty) {
@@ -63,22 +63,22 @@ class sign_in extends StatelessWidget {
                 mycontroller: email,
                 hinttext: "Enter Your Email",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Text(
+              const Text(
                 "Password",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               CustomTextForm(
-                prefixIcon: Icon(Icons.lock),
-                suffixIcon: Icon(Icons.visibility_off_outlined),
+                prefixIcon: const Icon(Icons.lock),
+                suffixIcon: const Icon(Icons.visibility_off_outlined),
                 validator: (val) {
                   if (val == null || val.isEmpty) {
                     print("it mustnot be empty");
@@ -93,7 +93,7 @@ class sign_in extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.topRight,
                   margin: const EdgeInsets.only(top: 20, bottom: 20),
-                  child: Text(
+                  child: const Text(
                     "Forgot Password ?",
                     style: TextStyle(
                       fontSize: 15,
@@ -101,14 +101,14 @@ class sign_in extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               CustomButton(
                 text: 'Log in',
                 onTap: () {},
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
@@ -121,7 +121,7 @@ class sign_in extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
@@ -141,7 +141,7 @@ class sign_in extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "Google",
                         style: TextStyle(
                           color: Colors.black,
@@ -152,7 +152,7 @@ class sign_in extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Center(
@@ -161,7 +161,7 @@ class sign_in extends StatelessWidget {
                     Get.to(Sign_up());
                   },
                   child: Text.rich(TextSpan(children: [
-                    TextSpan(
+                    const TextSpan(
                       text: "Don't have an account?",
                       style: TextStyle(
                         color: Colors.black,

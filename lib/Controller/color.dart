@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-Color springYellow = Color(0xFFF0E68C);
+Color springYellow = const Color(0xFFF0E68C);
