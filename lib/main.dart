@@ -1,9 +1,16 @@
-import 'package:day_tasks/views/splash.dart';
+import 'package:day_tasks/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyApp()
+    // DevicePreview(
+    //   enabled: !kReleaseMode, // تمكين في وضع التطوير فقط
+    //   builder: (context) => MyApp(),
+    // ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,10 +18,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DayTasks',
-      home: splash(),
+      // builder: DevicePreview.appBuilder, // تضمين جهاز العرض
+      // useInheritedMediaQuery: true, // استخدام الوسائط من جهاز العرض
+      // locale: DevicePreview.locale(context), // استخدام الموقع من جهاز العرض
+      home: SplashScreen(),
     );
   }
 }
