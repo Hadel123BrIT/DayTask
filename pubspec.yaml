@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.6.6
   device_preview: ^1.2.0
+  image_picker: ^1.1.2
+  line_icons: ^2.0.3
+  percent_indicator: ^4.2.4
 
 dev_dependencies:
   flutter_test:
@@ -62,17 +65,17 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - images/vecteezy_vector-illustration-of-a-business-women-working-in-an-office_35644833-removebg-preview (1).png
-     - images/4.png
+     - assets/images/vecteezy_vector-illustration-of-a-business-women-working-in-an-office_35644833-removebg-preview (1).png
+     - assets/images/4.png
 
 
   fonts:
      - family: PilatExtended
        fonts:
-         - asset: fonts/PilatExtended-Bold.ttf
+         - asset: assets/fonts/PilatExtended-Bold.ttf
      - family: Inter
        fonts:
-         - asset: fonts/Inter-Regular.otf
+         - asset: assets/fonts/Inter-Regular.otf
 
 
 

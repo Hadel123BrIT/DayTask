@@ -1,14 +1,24 @@
-import 'package:day_tasks/views/sign_in_screen.dart';
+
+import 'package:day_tasks/Core/constant/customButton.dart';
+import 'package:day_tasks/Views/sign_in_screen.dart';
+import 'package:day_tasks/Views/sign_up_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../constant/color.dart';
-import '../constant/customButton.dart';
-import '../constant/customText.dart';
-import '../constant/font.dart';
+import 'package:get/get_core/src/get_main.dart';
 
-class SplashScreen extends StatelessWidget {
+import '../Core/constant/color.dart';
+import '../Core/constant/customText.dart';
+import '../Core/constant/font.dart';
+
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +27,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              "images/vecteezy_vector-illustration-of-a-business-women-working-in-an-office_35644833-removebg-preview (1).png",
+              "assets/images/vecteezy_vector-illustration-of-a-business-women-working-in-an-office_35644833-removebg-preview (1).png",
               width:MediaQuery.of(context).size.width * 0.9 ,
               height: MediaQuery.of(context).size.height * 0.47,
             ),
@@ -47,22 +57,28 @@ class SplashScreen extends StatelessWidget {
                 ),
               ])),
             ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.9,
-              color: springYellow,
-              child: TextButton(
-                onPressed: () {
-                  Get.to(sign_in());
-                },
-                child: customText(
-                  text: 'Lets start',
-                  fontfamily: fontFamily2,
-                  fontsize: 25,
-                  bold: true,
-                  color: color_text,
-                ),
-              ),
-            ),
+            // Container(
+            //   width: MediaQuery.of(context).size.width * 0.9,
+            //   color: springYellow,
+            //   child: TextButton(
+            //     onPressed: () {
+            //       Get.to(Sign_up());
+            //     },
+            //     child: customText(
+            //       text: 'Lets start',
+            //       fontfamily: fontFamily2,
+            //       fontsize: 25,
+            //       bold: true,
+            //       color: color_text, max: 1,
+            //     ),
+            //   ),
+            // ),
+            CustomButton(text: "Lets start", onTap:(){
+              setState(() {
+                Get.to(Sign_up());
+              });
+            }),
+
           ],
         ),
       ),

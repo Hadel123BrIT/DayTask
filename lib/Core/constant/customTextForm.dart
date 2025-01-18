@@ -1,4 +1,4 @@
-import 'package:day_tasks/constant/font.dart';
+import 'package:day_tasks/Core/constant/font.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextForm extends StatelessWidget {

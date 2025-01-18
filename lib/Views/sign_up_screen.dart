@@ -1,10 +1,16 @@
-import 'package:day_tasks/constant/customText.dart';
-import 'package:day_tasks/constant/font.dart';
+import 'package:day_tasks/Core/constant/customText.dart';
+import 'package:day_tasks/Views/sign_in_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../constant/color.dart';
-import '../constant/customButton.dart';
-import '../constant/customTextForm.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../Core/constant/color.dart';
+import '../Core/constant/customButton.dart';
+import '../Core/constant/customTextForm.dart';
+import '../Core/constant/font.dart';
+import 'Home_screen.dart';
+
 
 class Sign_up extends StatelessWidget {
   TextEditingController email = TextEditingController();
@@ -20,7 +26,7 @@ class Sign_up extends StatelessWidget {
 
     return Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(screenWidth * 0.03),
+          padding: EdgeInsets.all(screenWidth * 0.04),
           child: ListView(
               children: [
                 Form(
@@ -38,7 +44,7 @@ class Sign_up extends StatelessWidget {
                           fontfamily: fontFamily2,
                           fontsize: 30,
                           bold: true,
-                          color: color_title
+                          color: color_title, max: 1,
                       ),
                       SizedBox(
                         height: screenHeight * 0.02,
@@ -47,7 +53,7 @@ class Sign_up extends StatelessWidget {
                           fontfamily: fontFamily2,
                           fontsize: 18,
                           bold: true,
-                          color: color_title
+                          color: color_title, max: 1,
                       ),
                       SizedBox(
                         height: screenHeight * 0.01,
@@ -71,7 +77,7 @@ class Sign_up extends StatelessWidget {
                           fontfamily: fontFamily2,
                           fontsize: 18,
                           bold: true,
-                          color: color_title
+                          color: color_title, max: 1,
                       ),
                       SizedBox(
                         height: screenHeight * 0.01,
@@ -95,7 +101,7 @@ class Sign_up extends StatelessWidget {
                           fontfamily: fontFamily2,
                           fontsize: 18,
                           bold: true,
-                          color: color_title
+                          color: color_title, max: 1,
                       ),
                       SizedBox(
                         height: screenHeight * 0.015,
@@ -133,7 +139,7 @@ class Sign_up extends StatelessWidget {
                                           text: "I have read & ageeed to DayTask ",
                                           style: TextStyle(
                                             color: Colors.grey,
-                                            fontSize: 18,
+                                            fontSize: 14,
                                             fontWeight: FontWeight.bold,
                                             fontFamily: fontFamily2,
                                           ),
@@ -141,7 +147,7 @@ class Sign_up extends StatelessWidget {
                                         TextSpan(
                                           text: "Privacy Policy, Terms & Condition",
                                           style: TextStyle(
-                                            fontSize: 18,
+                                            fontSize: 14,
                                             fontWeight: FontWeight.bold,
                                             color: springYellow,
                                             fontFamily: fontFamily2,
@@ -155,8 +161,10 @@ class Sign_up extends StatelessWidget {
                       SizedBox(
                         height: screenHeight * 0.01,
                       ),
-                      CustomButton(text: 'Log in',
-                        onTap: (){},
+                      CustomButton(text: 'Sign up',
+                        onTap: (){
+                          Get.off(Home_Screen());
+                        },
                       ),
                       SizedBox(
                         height: screenHeight * 0.03,
@@ -169,7 +177,7 @@ class Sign_up extends StatelessWidget {
                               fontfamily: fontFamily2,
                               fontsize: 15,
                               bold: true,
-                              color: color_title
+                              color: color_title, max: 1,
                           ),
                         ),
                       ),
@@ -186,14 +194,14 @@ class Sign_up extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset("images/4.png",width: screenWidth * 0.07,height: screenHeight * 0.07,),
+                            Image.asset("assets/images/4.png",width: screenWidth * 0.07,height: screenHeight * 0.07,),
                             TextButton(
                               onPressed: (){},
                               child: customText(text: "Google",
                                   fontfamily: fontFamily2,
                                   fontsize: 25,
                                   bold: true,
-                                  color: color_title
+                                  color: color_title, max: 1,
                               ),
                             ),
                           ],
@@ -205,7 +213,7 @@ class Sign_up extends StatelessWidget {
                       Center(
                         child: InkWell(
                           onTap: (){
-                            Get.to(Sign_up());
+                            Get.to(sign_in());
                           },
                           child: Text.rich(TextSpan(children: [
                             const TextSpan(text: "Already you have an account?",

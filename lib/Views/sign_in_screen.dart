@@ -1,11 +1,15 @@
-import 'package:day_tasks/constant/font.dart';
-import 'package:day_tasks/views/sign_up_screen.dart';
+import 'package:day_tasks/Views/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../constant/color.dart';
-import '../constant/customButton.dart';
-import '../constant/customText.dart';
-import '../constant/customTextForm.dart';
+
+import '/Core/constant/color.dart';
+import '/Core/constant/customButton.dart';
+import '/Core/constant/customText.dart';
+import '/Core/constant/customTextForm.dart';
+import '/Core/constant/font.dart';
+import 'Home_screen.dart';
+
+
 
 class sign_in extends StatelessWidget {
   TextEditingController email = TextEditingController();
@@ -20,7 +24,7 @@ class sign_in extends StatelessWidget {
 
     return Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(screenWidth * 0.05),
+          padding: EdgeInsets.all(screenWidth * 0.04),
           child: ListView(children: [
             Form(
               key: formState,
@@ -38,7 +42,7 @@ class sign_in extends StatelessWidget {
                     fontfamily: fontFamily2,
                     fontsize: 30,
                     bold: true,
-                    color: color_title,
+                    color: color_title, max: 1,
                   ),
                   SizedBox(
                     height: screenHeight * 0.02,
@@ -48,7 +52,7 @@ class sign_in extends StatelessWidget {
                     fontfamily: fontFamily2,
                     fontsize: 18,
                     bold: true,
-                    color: color_title,
+                    color: color_title, max: 1,
                   ),
                   SizedBox(
                     height: screenHeight * 0.01,
@@ -73,7 +77,7 @@ class sign_in extends StatelessWidget {
                     fontfamily: fontFamily2,
                     fontsize: 18,
                     bold: true,
-                    color: color_title,
+                    color: color_title, max: 1,
                   ),
                   SizedBox(
                     height: screenHeight * 0.015,
@@ -99,6 +103,7 @@ class sign_in extends StatelessWidget {
                         "Forgot Password?",
                         style: TextStyle(
                           fontSize: 15,
+                          fontFamily: fontFamily2,
                         ),
                       ),
                     ),
@@ -108,7 +113,9 @@ class sign_in extends StatelessWidget {
                   ),
                   CustomButton(
                     text: 'Log in',
-                    onTap: () {},
+                    onTap: () {
+                      Get.off(Home_Screen());
+                    },
                   ),
                   SizedBox(
                     height: screenHeight * 0.03,
@@ -120,7 +127,7 @@ class sign_in extends StatelessWidget {
                       fontfamily: fontFamily2,
                       fontsize: 15,
                       bold: true,
-                      color: color_title,
+                      color: color_title, max: 1,
                     ),
                   ),
                   SizedBox(
@@ -137,7 +144,7 @@ class sign_in extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "images/4.png",
+                          "assets/images/4.png",
                           width: screenWidth * 0.07,
                           height: screenHeight * 0.07,
                         ),
@@ -148,7 +155,7 @@ class sign_in extends StatelessWidget {
                             fontfamily: fontFamily2,
                             fontsize: 25,
                             bold: true,
-                            color: color_title,
+                            color: color_title, max: 1,
                           ),
                         ),
                       ],
@@ -166,6 +173,7 @@ class sign_in extends StatelessWidget {
                         const TextSpan(
                           text: "Don't have an account?",
                           style: TextStyle(
+                            fontFamily: fontFamily2,
                             color: Colors.black,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -174,6 +182,7 @@ class sign_in extends StatelessWidget {
                         TextSpan(
                           text: "  Sign Up",
                           style: TextStyle(
+                            fontFamily: fontFamily2,
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: springYellow,

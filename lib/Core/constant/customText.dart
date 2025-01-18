@@ -7,7 +7,9 @@ class customText extends StatelessWidget {
      required this.fontsize,
      required this.bold,
      required this.color,
+     required this.max,
    });
+   int max;
   String text;
   String fontfamily;
   double fontsize;
@@ -16,6 +18,8 @@ class customText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Text(
+      maxLines:max,
+      overflow: TextOverflow.ellipsis,
       text,
       style: TextStyle(
         fontFamily:fontfamily,
