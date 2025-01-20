@@ -1,7 +1,8 @@
 import 'dart:io';
 import 'package:day_tasks/Core/constant/customText.dart';
 import 'package:day_tasks/Core/constant/font.dart';
-import 'package:day_tasks/Views/Profile.dart';
+import 'package:day_tasks/Views/Home/Task_Details_screen.dart';
+import 'package:day_tasks/Views/Profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,8 +10,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-import '../Core/constant/color.dart';
-import 'Messages/chat_messages.dart';
+import '../../Core/constant/color.dart';
+import '../Messages/chat_messages.dart';
 
 class Home_Screen extends StatefulWidget {
    Home_Screen({super.key});
@@ -20,164 +21,175 @@ class Home_Screen extends StatefulWidget {
 }
 
 class _Home_ScreenState extends State<Home_Screen> {
-  Widget customCompleteTask() => Container(
-    width: 200,
-    height: 200,
-    decoration: BoxDecoration(
-        color: Colors.grey[300],
-    ),
-    child: Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Column(
-        children: [
-          customText(text: "Day Task Mobile Applicition",
-              fontfamily: fontFamily1,
-              fontsize: 22,
-              bold: true,
-              color: color_title,
-              max: 3,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Row(
-            children: [
-              Expanded(child: customText(text: 'Team member', fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max: 1,)),
-              Stack(
-                alignment: Alignment.bottomRight,
-                children: [
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 9,
-                        backgroundColor: Colors.grey[400],
-                        child: Icon(Icons.person,
-                          size: 10,
-                          color: Colors.grey[300],
-                        )  ,
-                      ),
-                      CircleAvatar(
-                        radius: 9,
-                        backgroundColor: Colors.grey[400],
-                        child: Icon(Icons.person,
-                          size: 10,
-                          color: Colors.grey[300],
-                        )  ,
-                      ),
-                      CircleAvatar(
-                        radius: 9,
-                        backgroundColor: Colors.grey[400],
-                        child: Icon(Icons.person,
-                          size: 10,
-                          color: Colors.grey[300],
-                        )  ,
-                      ),
-                      CircleAvatar(
-                        radius: 9,
-                        backgroundColor: Colors.grey[400],
-                        child: Icon(Icons.person,
-                          size: 10,
-                          color: Colors.grey[300],
-                        )  ,
-                      ),
-                    ],
-                  ),
-                ],
-              )
-            ],
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          Row(
-            children: [
-              Expanded(child: customText(text: 'completed', fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max: 1,)),
-              customText(text: '100%', fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max: 1,),
-
-            ],
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            height: 7,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              color: Colors.grey[400],
-            ),
-
-          ),
-        ],
+  Widget customCompleteTask() => InkWell(
+    onTap: (){
+      Get.to(TaskDetailsScreen(),
+      );
+    },
+    child: Container(
+      width: 200,
+      height: 200,
+      decoration: BoxDecoration(
+          color: Colors.grey[300],
       ),
-    ),
-  );
-  Widget customOngoingTask() => Container(
-    width: 220,
-    height: 190,
-    decoration: BoxDecoration(
-    color: Colors.grey[300],
-  ),
-    child: Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        Row(
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
           children: [
-            Expanded(
-              child: customText(text: "Day Task Mobile Applicition",
+            customText(text: "Day Task Mobile Applicition",
                 fontfamily: fontFamily1,
                 fontsize: 22,
                 bold: true,
                 color: color_title,
                 max: 3,
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              children: [
+                Expanded(child: customText(text: 'Team member', fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max: 1,)),
+                Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 9,
+                          backgroundColor: Colors.grey[400],
+                          child: Icon(Icons.person,
+                            size: 10,
+                            color: Colors.grey[300],
+                          )  ,
+                        ),
+                        CircleAvatar(
+                          radius: 9,
+                          backgroundColor: Colors.grey[400],
+                          child: Icon(Icons.person,
+                            size: 10,
+                            color: Colors.grey[300],
+                          )  ,
+                        ),
+                        CircleAvatar(
+                          radius: 9,
+                          backgroundColor: Colors.grey[400],
+                          child: Icon(Icons.person,
+                            size: 10,
+                            color: Colors.grey[300],
+                          )  ,
+                        ),
+                        CircleAvatar(
+                          radius: 9,
+                          backgroundColor: Colors.grey[400],
+                          child: Icon(Icons.person,
+                            size: 10,
+                            color: Colors.grey[300],
+                          )  ,
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Row(
+              children: [
+                Expanded(child: customText(text: 'completed', fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max: 1,)),
+                customText(text: '100%', fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max: 1,),
+
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 7,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.grey[400],
               ),
+
             ),
           ],
         ),
-        SizedBox( height: 10, ),
-        Row(
+      ),
+    ),
+  );
+  Widget customOngoingTask() => InkWell(
+    onTap: (){
+      Get.to(TaskDetailsScreen());
+    },
+    child: Container(
+      width: 220,
+      height: 190,
+      decoration: BoxDecoration(
+      color: Colors.grey[300],
+    ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            customText(text: 'Team member',
-              fontfamily: fontFamily2,
-              fontsize: 14,
-              bold: false,
-              color: Colors.grey,
-              max: 1,
-            ),
-          ],
-        ),
-        SizedBox(height: 10,),
-        Row(
+          Row(
             children: [
-              CircleAvatar( radius: 9, backgroundColor: Colors.grey[400],
-              child: Icon(Icons.person, size: 10, color: Colors.grey[300],
-              ) ,
-            ),
-              CircleAvatar(
-                radius: 9,
-                backgroundColor: Colors.grey[400],
-                child: Icon(Icons.person, size: 10, color: Colors.grey[300],
-                ) ,
-              ),
-              CircleAvatar( radius: 9, backgroundColor: Colors.grey[400],
-                child: Icon(Icons.person, size: 10, color: Colors.grey[300],
-                ) ,
+              Expanded(
+                child: customText(text: "Day Task Mobile Applicition",
+                  fontfamily: fontFamily1,
+                  fontsize: 22,
+                  bold: true,
+                  color: color_title,
+                  max: 3,
+                ),
               ),
             ],
           ),
-        SizedBox(height: 10,),
-        Row(
-          children: [
-            Expanded(
-              child: customText(text: "Due on: 21 March ",
-                  fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max:1
+          SizedBox( height: 10, ),
+          Row(
+            children: [
+              customText(text: 'Team member',
+                fontfamily: fontFamily2,
+                fontsize: 14,
+                bold: false,
+                color: Colors.grey,
+                max: 1,
               ),
+            ],
+          ),
+          SizedBox(height: 10,),
+          Row(
+              children: [
+                CircleAvatar( radius: 9, backgroundColor: Colors.grey[400],
+                child: Icon(Icons.person, size: 10, color: Colors.grey[300],
+                ) ,
+              ),
+                CircleAvatar(
+                  radius: 9,
+                  backgroundColor: Colors.grey[400],
+                  child: Icon(Icons.person, size: 10, color: Colors.grey[300],
+                  ) ,
+                ),
+                CircleAvatar( radius: 9, backgroundColor: Colors.grey[400],
+                  child: Icon(Icons.person, size: 10, color: Colors.grey[300],
+                  ) ,
+                ),
+              ],
             ),
-          ],
+          SizedBox(height: 10,),
+          Row(
+            children: [
+              Expanded(
+                child: customText(text: "Due on: 21 March ",
+                    fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max:1
+                ),
+              ),
+            ],
+          ),
+        ],
         ),
-      ],
       ),
     ),
   );

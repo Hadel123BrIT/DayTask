@@ -9,7 +9,7 @@ import '../Core/constant/color.dart';
 import '../Core/constant/customButton.dart';
 import '../Core/constant/customTextForm.dart';
 import '../Core/constant/font.dart';
-import 'Home_screen.dart';
+import 'Home/Home_screen.dart';
 
 
 class Sign_up extends StatelessWidget {

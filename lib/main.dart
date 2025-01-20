@@ -1,4 +1,4 @@
-import 'package:day_tasks/Views/Profile.dart';
+import 'package:day_tasks/Views/Profile_screen.dart';
 import 'package:day_tasks/Core/constant/color.dart';
 import 'package:day_tasks/views/splash_screen.dart';
 import 'package:flutter/material.dart';
