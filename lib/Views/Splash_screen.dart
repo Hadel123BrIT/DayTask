@@ -1,7 +1,7 @@
 
 import 'package:day_tasks/Core/constant/customButton.dart';
-import 'package:day_tasks/Views/sign_in_screen.dart';
-import 'package:day_tasks/Views/sign_up_screen.dart';
+import 'package:day_tasks/Views/Sign_in_screen.dart';
+import 'package:day_tasks/Views/Sign_up_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

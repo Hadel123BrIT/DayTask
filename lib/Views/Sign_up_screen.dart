@@ -1,5 +1,5 @@
 import 'package:day_tasks/Core/constant/customText.dart';
-import 'package:day_tasks/Views/sign_in_screen.dart';
+import 'package:day_tasks/Views/Sign_in_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

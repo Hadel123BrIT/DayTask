@@ -3,6 +3,7 @@ import 'package:day_tasks/Core/constant/customText.dart';
 import 'package:day_tasks/Core/constant/font.dart';
 import 'package:day_tasks/Views/Home/Task_Details_screen.dart';
 import 'package:day_tasks/Views/Profile_screen.dart';
+import 'package:day_tasks/Views/Schedule_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ import '../../Core/constant/color.dart';
 import '../Messages/chat_messages.dart';
 
 class Home_Screen extends StatefulWidget {
-   Home_Screen({super.key});
+  Home_Screen({super.key});
 
   @override
   State<Home_Screen> createState() => _Home_ScreenState();
@@ -27,24 +28,24 @@ class _Home_ScreenState extends State<Home_Screen> {
       );
     },
     child: Container(
-      width: 200,
-      height: 200,
+      width: MediaQuery.of(context).size.width * 0.5,
+      height: MediaQuery.of(context).size.height * 0.25,
       decoration: BoxDecoration(
-          color: Colors.grey[300],
+        color: Colors.grey[300],
       ),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             customText(text: "Day Task Mobile Applicition",
-                fontfamily: fontFamily1,
-                fontsize: 22,
-                bold: true,
-                color: color_title,
-                max: 3,
+              fontfamily: fontFamily1,
+              fontsize: 22,
+              bold: true,
+              color: color_title,
+              max: 3,
             ),
             SizedBox(
-              height: 15,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             Row(
               children: [
@@ -55,34 +56,34 @@ class _Home_ScreenState extends State<Home_Screen> {
                     Row(
                       children: [
                         CircleAvatar(
-                          radius: 9,
+                          radius: MediaQuery.of(context).size.width * 0.02,
                           backgroundColor: Colors.grey[400],
                           child: Icon(Icons.person,
-                            size: 10,
+                            size: MediaQuery.of(context).size.width * 0.025,
                             color: Colors.grey[300],
                           )  ,
                         ),
                         CircleAvatar(
-                          radius: 9,
+                          radius: MediaQuery.of(context).size.width * 0.02,
                           backgroundColor: Colors.grey[400],
                           child: Icon(Icons.person,
-                            size: 10,
+                            size: MediaQuery.of(context).size.width * 0.025,
                             color: Colors.grey[300],
                           )  ,
                         ),
                         CircleAvatar(
-                          radius: 9,
+                          radius: MediaQuery.of(context).size.width * 0.02,
                           backgroundColor: Colors.grey[400],
                           child: Icon(Icons.person,
-                            size: 10,
+                            size: MediaQuery.of(context).size.width * 0.025,
                             color: Colors.grey[300],
                           )  ,
                         ),
                         CircleAvatar(
-                          radius: 9,
+                          radius: MediaQuery.of(context).size.width * 0.02,
                           backgroundColor: Colors.grey[400],
                           child: Icon(Icons.person,
-                            size: 10,
+                            size: MediaQuery.of(context).size.width * 0.025,
                             color: Colors.grey[300],
                           )  ,
                         ),
@@ -93,7 +94,7 @@ class _Home_ScreenState extends State<Home_Screen> {
               ],
             ),
             SizedBox(
-              height: 8,
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             Row(
               children: [
@@ -103,10 +104,10 @@ class _Home_ScreenState extends State<Home_Screen> {
               ],
             ),
             SizedBox(
-              height: 10,
+              height: MediaQuery.of(context).size.height * 0.015,
             ),
             Container(
-              height: 7,
+              height: MediaQuery.of(context).size.height * 0.01,
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
@@ -124,71 +125,71 @@ class _Home_ScreenState extends State<Home_Screen> {
       Get.to(TaskDetailsScreen());
     },
     child: Container(
-      width: 220,
-      height: 190,
+      width: MediaQuery.of(context).size.width * 0.55,
+      height: MediaQuery.of(context).size.height * 0.24,
       decoration: BoxDecoration(
-      color: Colors.grey[300],
-    ),
+        color: Colors.grey[300],
+      ),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          Row(
-            children: [
-              Expanded(
-                child: customText(text: "Day Task Mobile Applicition",
-                  fontfamily: fontFamily1,
-                  fontsize: 22,
-                  bold: true,
-                  color: color_title,
-                  max: 3,
-                ),
-              ),
-            ],
-          ),
-          SizedBox( height: 10, ),
-          Row(
-            children: [
-              customText(text: 'Team member',
-                fontfamily: fontFamily2,
-                fontsize: 14,
-                bold: false,
-                color: Colors.grey,
-                max: 1,
-              ),
-            ],
-          ),
-          SizedBox(height: 10,),
-          Row(
+            Row(
               children: [
-                CircleAvatar( radius: 9, backgroundColor: Colors.grey[400],
-                child: Icon(Icons.person, size: 10, color: Colors.grey[300],
-                ) ,
-              ),
-                CircleAvatar(
-                  radius: 9,
-                  backgroundColor: Colors.grey[400],
-                  child: Icon(Icons.person, size: 10, color: Colors.grey[300],
+                Expanded(
+                  child: customText(text: "Day Task Mobile Applicition",
+                    fontfamily: fontFamily1,
+                    fontsize: 22,
+                    bold: true,
+                    color: color_title,
+                    max: 3,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox( height: MediaQuery.of(context).size.height * 0.015, ),
+            Row(
+              children: [
+                customText(text: 'Team member',
+                  fontfamily: fontFamily2,
+                  fontsize: 14,
+                  bold: false,
+                  color: Colors.grey,
+                  max: 1,
+                ),
+              ],
+            ),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
+            Row(
+              children: [
+                CircleAvatar( radius: MediaQuery.of(context).size.width * 0.02, backgroundColor: Colors.grey[400],
+                  child: Icon(Icons.person, size: MediaQuery.of(context).size.width * 0.025, color: Colors.grey[300],
                   ) ,
                 ),
-                CircleAvatar( radius: 9, backgroundColor: Colors.grey[400],
-                  child: Icon(Icons.person, size: 10, color: Colors.grey[300],
+                CircleAvatar(
+                  radius: MediaQuery.of(context).size.width * 0.02,
+                  backgroundColor: Colors.grey[400],
+                  child: Icon(Icons.person, size: MediaQuery.of(context).size.width * 0.025, color: Colors.grey[300],
+                  ) ,
+                ),
+                CircleAvatar( radius: MediaQuery.of(context).size.width * 0.02, backgroundColor: Colors.grey[400],
+                  child: Icon(Icons.person, size: MediaQuery.of(context).size.width * 0.025, color: Colors.grey[300],
                   ) ,
                 ),
               ],
             ),
-          SizedBox(height: 10,),
-          Row(
-            children: [
-              Expanded(
-                child: customText(text: "Due on: 21 March ",
-                    fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max:1
+            SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
+            Row(
+              children: [
+                Expanded(
+                  child: customText(text: "Due on: 21 March ",
+                      fontfamily: fontFamily2, fontsize: 14, bold: false, color: Colors.grey, max:1
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
         ),
       ),
     ),
@@ -200,7 +201,7 @@ class _Home_ScreenState extends State<Home_Screen> {
     return  SafeArea(
       child: Scaffold(
         bottomNavigationBar: NavigationBar(
-          height: 70,
+          height: MediaQuery.of(context).size.height * 0.1,
           elevation: 0.0,
           selectedIndex: 0,
           destinations: [
@@ -218,13 +219,13 @@ class _Home_ScreenState extends State<Home_Screen> {
               icon: Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: Container(
-                  height: 60,
-                  width: 60,
+                  height: MediaQuery.of(context).size.height * 0.08,
+                  width: MediaQuery.of(context).size.width * 0.15,
                   color: springYellow,
                   child: Center(
                     child: Icon(
                       Icons.add_box_outlined,
-                      size: 35,
+                      size: MediaQuery.of(context).size.width * 0.09,
                     ),
                   ),
                 ),
@@ -232,7 +233,7 @@ class _Home_ScreenState extends State<Home_Screen> {
               label: '',
             ),
             NavigationDestination(icon: IconButton(onPressed: (){
-
+              Get.to(schedule());
             },
                 icon: Icon(Icons.calendar_month_rounded)),
                 label: "Calender"),
@@ -243,8 +244,9 @@ class _Home_ScreenState extends State<Home_Screen> {
                 label: "Notifications"),
           ],
         ),
+
         body: Padding(
-          padding: const EdgeInsets.all(17.0),
+          padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.04),
           child: Column(
             children: [
               Row(
@@ -277,7 +279,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                         Get.to(Profile_Screen());
                       },
                       child: CircleAvatar(
-                        radius: 30,
+                        radius: MediaQuery.of(context).size.width * 0.07,
                         backgroundColor: Colors.grey[300],
                         child: Icon(Icons.person,
                           color: Colors.grey,
@@ -288,24 +290,24 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ],
               ),
               SizedBox(
-                height: 25,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               Row(
                 children: [
                   Expanded(child: Container(
-                    height: 45,
+                    height: MediaQuery.of(context).size.height * 0.05,
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
                       child: Row(
                         children: [
                           Icon(Icons.search,
-                          color: Colors.grey,
+                            color: Colors.grey,
                           ),
                           SizedBox(
-                            width: 10,
+                            width: MediaQuery.of(context).size.width * 0.02,
                           ),
                           customText(text: "Search tasks",
                               fontfamily: fontFamily2,
@@ -318,11 +320,11 @@ class _Home_ScreenState extends State<Home_Screen> {
                     ),
                   )),
                   SizedBox(
-                    width: 20,
+                    width: MediaQuery.of(context).size.width * 0.05,
                   ),
                   Container(
-                    height: 45,
-                    width: 45,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    width: MediaQuery.of(context).size.width * 0.1,
                     alignment: Alignment.bottomRight,
                     decoration: BoxDecoration(
                       color: springYellow,
@@ -332,7 +334,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: MediaQuery.of(context).size.height * 0.04,
               ),
               Row(
                 children: [
@@ -358,19 +360,19 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ],
               ),
               SizedBox(
-                height: 20,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Container(
-                height: 200,
+                height: MediaQuery.of(context).size.height * 0.25,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => customCompleteTask(),
-                  separatorBuilder: (context, index) => SizedBox(width: 15),
+                  separatorBuilder: (context, index) => SizedBox(width: MediaQuery.of(context).size.width * 0.04),
                   itemCount: 15,
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: MediaQuery.of(context).size.height * 0.04,
               ),
               Row(
                 children: [
@@ -396,21 +398,22 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ],
               ),
               SizedBox(
-                height: 20,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Container(
-               // width: 200,
-                height: 160,
+                // width: 200,
+                height: MediaQuery.of(context).size.height * 0.2,
                 child: ListView.separated(
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) => customOngoingTask(),
-                  separatorBuilder: (context, index) => SizedBox(height: 15),
+                  separatorBuilder: (context, index) => SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                   itemCount: 15,
                 ),
               ),
             ],
           ),
         ),
+
       ),
     );
   }

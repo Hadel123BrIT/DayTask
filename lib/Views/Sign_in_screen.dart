@@ -1,4 +1,4 @@
-import 'package:day_tasks/Views/sign_up_screen.dart';
+import 'package:day_tasks/Views/Sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

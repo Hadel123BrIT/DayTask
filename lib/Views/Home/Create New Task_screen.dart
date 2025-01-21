@@ -33,13 +33,13 @@ class _createNewTaskState extends State<createNewTask> {
         ),
         actions: [
           Container(
-            width: 50,
+            width: MediaQuery.of(context).size.width * 0.12,
             child: Icon(Icons.mode_edit_outline_rounded),
           ),
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -51,7 +51,7 @@ class _createNewTaskState extends State<createNewTask> {
               color: color_title, max: 1,
             ),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             CustomTextForm(
               validator: (val) {
@@ -64,7 +64,7 @@ class _createNewTaskState extends State<createNewTask> {
               mycontroller: title, prefixIcon: null, suffixIcon: null,
             ),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             customText(
               text: "Task Details",
@@ -74,7 +74,7 @@ class _createNewTaskState extends State<createNewTask> {
               color: color_title, max: 1,
             ),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             TextFormField(
               decoration: InputDecoration(
@@ -99,7 +99,7 @@ class _createNewTaskState extends State<createNewTask> {
               minLines: 3, // الحد الأدنى لعدد الأسطر
             ),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             customText(
               text: "Add Team members",
@@ -109,23 +109,23 @@ class _createNewTaskState extends State<createNewTask> {
               color: color_title, max: 1,
             ),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             Row(
               children: [
                 Expanded(
                   child: Container(
                     color: Colors.grey[300],
-                    height: 40,
-                    width: 140,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    width: MediaQuery.of(context).size.width * 0.35,
                     child: Row(
                       children: [
                         Expanded(
                           child: CircleAvatar(
-                            radius: 12,
+                            radius: MediaQuery.of(context).size.width * 0.03,
                             backgroundColor: Colors.grey[400],
                             child: Icon(Icons.person,
-                              size: 10,
+                              size: MediaQuery.of(context).size.width * 0.025,
                               color: Colors.grey[300],
                             )  ,
                           ),
@@ -141,28 +141,28 @@ class _createNewTaskState extends State<createNewTask> {
                         ),
                         Expanded(
                             child: Icon(Icons.clear_outlined,
-                            size: 20,
+                              size: MediaQuery.of(context).size.width * 0.05,
                             )),
                       ],
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: MediaQuery.of(context).size.width * 0.05,
                 ),
                 Expanded(
                   child: Container(
                     color: Colors.grey[300],
-                    height: 40,
-                    width: 140,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    width: MediaQuery.of(context).size.width * 0.35,
                     child: Row(
                       children: [
                         Expanded(
                           child: CircleAvatar(
-                            radius: 12,
+                            radius: MediaQuery.of(context).size.width * 0.03,
                             backgroundColor: Colors.grey[400],
                             child: Icon(Icons.person,
-                              size: 10,
+                              size: MediaQuery.of(context).size.width * 0.025,
                               color: Colors.grey[300],
                             )  ,
                           ),
@@ -178,18 +178,18 @@ class _createNewTaskState extends State<createNewTask> {
                         ),
                         Expanded(
                             child: Icon(Icons.clear_outlined,
-                              size: 20,
+                              size: MediaQuery.of(context).size.width * 0.05,
                             )),
                       ],
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: MediaQuery.of(context).size.width * 0.05,
                 ),
                 Container(
-                  height: 45,
-                  width: 45,
+                  height: MediaQuery.of(context).size.height * 0.06,
+                  width: MediaQuery.of(context).size.width * 0.1,
                   alignment: Alignment.bottomRight,
                   decoration: BoxDecoration(
                     color: springYellow,
@@ -199,7 +199,7 @@ class _createNewTaskState extends State<createNewTask> {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             customText(
               text: "Time & Date",
@@ -209,26 +209,26 @@ class _createNewTaskState extends State<createNewTask> {
               color: color_title, max: 1,
             ),
             SizedBox(
-              height: 20,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
             Row(
               children: [
                 Expanded(
                   child: Container(
                     color: Colors.grey[300],
-                    height: 40,
-                    width: 140,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    width: MediaQuery.of(context).size.width * 0.35,
                     child: Row(
                       children: [
                         Container(
                           color:springYellow,
-                          width: 50,
-                          height: 50,
+                          width: MediaQuery.of(context).size.width * 0.12,
+                          height: MediaQuery.of(context).size.height * 0.06,
                           child: Icon(Icons.watch_later_outlined,
-                            size: 20,
+                            size: MediaQuery.of(context).size.width * 0.05,
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(width: MediaQuery.of(context).size.width * 0.02,),
                         Expanded(
                           child: customText(text: "10:00  AM",
                               fontfamily: fontFamily2,
@@ -244,24 +244,24 @@ class _createNewTaskState extends State<createNewTask> {
                   ),
                 ),
                 SizedBox(
-                  width: 20,
+                  width: MediaQuery.of(context).size.width * 0.05,
                 ),
                 Expanded(
                   child: Container(
                     color: Colors.grey[300],
-                    height: 40,
-                    width: 140,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    width: MediaQuery.of(context).size.width * 0.35,
                     child: Row(
                       children: [
                         Container(
                           color:springYellow,
-                          width: 50,
-                          height: 50,
+                          width: MediaQuery.of(context).size.width * 0.12,
+                          height: MediaQuery.of(context).size.height * 0.06,
                           child: Icon(Icons.calendar_month_sharp,
-                            size: 20,
+                            size: MediaQuery.of(context).size.width * 0.05,
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(width: MediaQuery.of(context).size.width * 0.02,),
                         Expanded(
                           child: customText(text: "25/11/2024",
                               fontfamily: fontFamily2,
@@ -281,7 +281,7 @@ class _createNewTaskState extends State<createNewTask> {
               ],
             ),
             SizedBox(
-              height: 40,
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
             Center(
               child: customText(text: "Add New",
@@ -290,12 +290,12 @@ class _createNewTaskState extends State<createNewTask> {
                   color: color_title, max: 1),
             ),
             SizedBox(
-              height: 40,
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
             Center(
               child: Container(
-                width: 300,
-                height: 65,
+                width: MediaQuery.of(context).size.width * 0.75,
+                height: MediaQuery.of(context).size.height * 0.08,
                 color: springYellow,
                 child: Center(
                   child: customText(text: "Create",

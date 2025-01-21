@@ -5,6 +5,8 @@ import 'package:day_tasks/Core/constant/font.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import '../Home/Home_screen.dart';
+import '../Schedule_screen.dart';
 import 'chat_messages.dart';
 import 'group_messages.dart';
 
@@ -83,8 +85,16 @@ class chat_messages extends StatelessWidget {
         elevation: 0.0,
         selectedIndex: 1,
         destinations: [
-          NavigationDestination(icon: Icon(Icons.home_filled), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.chat_outlined), label: 'Chat'),
+          NavigationDestination(icon: IconButton(onPressed: (){
+            Get.to(Home_Screen());
+          },
+              icon: Icon(Icons.home_filled)),
+              label: "Home"),
+          NavigationDestination(icon: IconButton(onPressed: (){
+            Get.to(chat_messages());
+          },
+              icon: Icon(Icons.chat_rounded)),
+              label: "Chat"),
           NavigationDestination(
             icon: Padding(
               padding: const EdgeInsets.only(top: 15),
@@ -102,8 +112,16 @@ class chat_messages extends StatelessWidget {
             ),
             label: '',
           ),
-          NavigationDestination(icon: Icon(Icons.calendar_month_rounded), label: 'Calender'),
-          NavigationDestination(icon: Icon(Icons.notifications_active), label: 'Notifications'),
+          NavigationDestination(icon: IconButton(onPressed: (){
+            Get.to(schedule());
+          },
+              icon: Icon(Icons.calendar_month_rounded)),
+              label: "Calender"),
+          NavigationDestination(icon: IconButton(onPressed: (){
+
+          },
+              icon: Icon(Icons.notifications_active)),
+              label: "Notifications"),
         ],
       ),
       appBar: AppBar(
